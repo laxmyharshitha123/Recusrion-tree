@@ -1,0 +1,44 @@
+## Recursive tree
+*a recursive tree is a tree diagram that shows how recursive function calls are made and how they break into smaller subproblems.
+*it is in tree like structure.
+*it is also called as visualization tree.
+it helps us to :
+* understand how recursion works
+* visualize function calls  in easiest way.
+* to calculate time complexity.
+example : linear recursion : public class test {
+                                static void fun(int n) {
+                                    if(n==0) {
+                                        return;
+                                    }
+                                    system.out.println(n);
+                                    fun(n-1);
+                                   }
+                                public static void main(String[] args){
+                                   fun(5);
+     }
+}
+call : fun(3) 
+*each fun makes one recursive call.
+*it is in one straight line tree.
+*so it is called linear recursion.
+time complexity = O(n)
+2.public class test {
+      static void fun(int n) {
+           if(n==0) {
+             return n;
+           }
+          return fun(n-1) + fun(n-2);
+        }
+     public static void main(String[] args) {
+     system.out.println(fun(5));
+  }
+}
+*Time complexity is O(2^n)
+*because it is growing 2^2 so time complexity is 2^n.
+important terms in recursion tree:
+*root: first function call.
+*node: each function call.
+*leaf node: base case.
+*height: maximum depth of recursion.
+*branching factor: number of recursive calls per function.
